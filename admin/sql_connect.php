@@ -5,7 +5,7 @@ function OpenConnDB()
 	$db_server = 'localhost';
 	$db_user = 'root';
 	$db_pass = 'root';
-	$db_name = 'root';
+	$db_name = 'wsb';
 
 	$db_conn = new mysqli($db_server, $db_user, $db_pass, $db_name) or die("Connect failed: %s\n" . $db_conn->error);
 

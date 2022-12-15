@@ -106,6 +106,16 @@ function selectAvaliableItems()
     CloseConDB($mysqli);
 }
 
+function changeItemStatus($item_id)
+{
+    $mysqli = OpenConnDB();
+    $changeStatus_querry = "UPDATE items SET available = 0 WHERE id = $item_id";
+
+    $mysqli->query($changeStatus_querry);
+
+    CloseConDB($mysqli);
+}
+
 
 function doItemUnavaliable($item_id)
 {
